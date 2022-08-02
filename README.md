@@ -1,7 +1,7 @@
 # GoldenShoe
 
 ## Setup 
-1. Activate a virtual envinronment `source <your_env_name>/bin/activate`
+1. Activate your virtual envinronment `venv/bin/activate`
 
 2. Install the following packages\
 `pip install Flask`\
