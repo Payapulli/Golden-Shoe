@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<center> 
+    <h2><span class="title">{{ title }}</span></h2>
+    <div class="container" style="min-height: 100vh;">
+        {% if l==0 %}
+        <div class="content-section" style="width: 50%; border: none;"></div>
+            <h4>Your cart is empty!</h4>
+        {% else %}
+        <div class="row">
+                <div class="table-responsive table-condensed table_style">
+                    <table class="table table-bordered table-striped table-hover">
+                        <tbody>
+                            <tr>
+                                <th>Item Name</th>
+                                <th>Size</th>
+                                <th>Quantity</th>
+                                <th>Total Cost</th>
+                                <th></th>
+                            </tr>
+                            {% for i in range(l)%}
+                                <tr>
+                                    <td>{{ product_names[i] }}</td>
+                                    <td>{{ product_sizes[i] }}</td>
+                                    <td>{{ cart[i].quantity}}</td>
+                                    <td><span class="currency">£</span>{{ cost[i] }}</td>
+                                    <td><a href="{{ url_for('removeitem', id=cart[i].pid) }}"><button class="btn btn-outline-danger">Remove Item</button></a></td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><b>Total</b></td>
+                                <td><b><span class="currency">£</span>{{ total }}</b></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                            <td colspan="5">
+                                <a href="{{ url_for('checkout')}}">
+                                    <center>
+                                        <button class="btn btn-outline-primary">Proceed To Payment</button>
+                                    </center>
+                                </a>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+        {% endif %}
+    </div>
+</center>
+{% endblock content%}

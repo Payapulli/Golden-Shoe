@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Home</title>
+    {% endif %}
+
+</head>
+<body>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{{ url_for('home') }}">Golden Shoe </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="{{ url_for('men') }}">Men</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="{{ url_for('women') }}">Women</a>
+        </li>
+        <form class="form-inline ml-auto" action="{{ url_for('search') }}" method="post" name="search">
+          <div class="md-form my-0">
+          {{ g.search_form.hidden_tag() }}{{ g.search_form.search(class="form-control") }}</div>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></form>
+      </ul>
+    </div>
+    <!-- Navbar Right Side -->
+    <div class="navbar-nav">
+      {% if current_user.is_authenticated %}
+      <a href="{{ url_for('cart') }}">
+      <i class="fa fa-shopping-cart fa-lg" aria-hidden="true" style="padding: 10px;"></i></a>
+      <a class="nav-item nav-link" href="{{ url_for('account') }}">Account</a>
+      <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+      {% else %}
+      <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+      <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+      {% endif %}
+    </div>
+  </nav>
+  
+  <main role="main" class="container">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <center><div class="alert alert-{{ category }}">
+                {{ message }}
+              </div><center>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+  </main>
+  {% block content %}{% endblock %}
+  <br><br><br><br>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+</body>
+</html>

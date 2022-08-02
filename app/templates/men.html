@@ -1,0 +1,237 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section-products">
+  <div class="container">
+      <div class="row">
+          <!-- Single Product -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+              <div id="product-1" class="single-product">
+                <a href="{{url_for('product', id=1)}}">
+                  <div class="part-1">
+                  </div>
+                </a>
+                  <div class="part-2">
+                      <h3 class="product-title">Addidas Breaknet Shoes</h3>
+                      <h4 class="product-old-price">$79.99</h4>
+                      <h4 class="product-price">$49.99</h4>
+                  </div>
+              </div>
+          </div>
+          <!-- Single Product -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+              <div id="product-2" class="single-product">
+                  <a href="{{url_for('product', id=22)}}">
+                    <div class="part-1">  
+                      <span class="discount">15% off</span>
+                    </div>
+                  </a>
+                  <div class="part-2">
+                      <h3 class="product-title">Ted Baker Leather Shoes</h3>
+                      <h4 class="product-price">$49.99</h4>
+                  </div>
+              </div>
+          </div>
+          <!-- Single Product -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div id="product-5" class="single-product">
+              <a href="{{url_for('product', id=10)}}">
+                <div class="part-1">
+                </div>
+              </a>
+                <div class="part-2">
+                    <h3 class="product-title">Blue Suede Sneakers</h3>
+                    <h4 class="product-old-price">$79.99</h4>
+                    <h4 class="product-price">$49.99</h4>
+                </div>
+            </div>
+          </div>
+          <!-- Single Product -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div id="product-7" class="single-product">
+              <a href="{{url_for('product', id=4)}}">
+                <div class="part-1">
+                </div>
+              </a>
+                <div class="part-2">
+                    <h3 class="product-title">Nike Air Max 95</h3>
+                    <h4 class="product-old-price">$79.99</h4>
+                    <h4 class="product-price">$49.99</h4>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Single Product -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div id="product-7" class="single-product">
+            <a href="{{url_for('product', id=4)}}">
+              <div class="part-1">
+              </div>
+            </a>
+              <div class="part-2">
+                  <h3 class="product-title">Nike Air Max 95</h3>
+                  <h4 class="product-old-price">$79.99</h4>
+                  <h4 class="product-price">$49.99</h4>
+              </div>
+          </div>
+      </div>
+      <!-- Single Product -->
+      <div class="col-md-6 col-lg-4 col-xl-3">
+          <div id="product-8" class="single-product">
+            <a href="{{url_for('product', id=19)}}">
+              <div class="part-1">
+              </div>
+            </a>
+              <div class="part-2">
+                  <h3 class="product-title">New Balance 990v2</h3>
+                  <h4 class="product-price">$49.99</h4>
+              </div>
+          </div>
+      </div>
+        <!-- Single Product -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div id="product-5" class="single-product">
+            <a href="{{url_for('product', id=10)}}">
+              <div class="part-1">
+              </div>
+            </a>
+              <div class="part-2">
+                  <h3 class="product-title">Blue Suede Sneakers</h3>
+                  <h4 class="product-old-price">$79.99</h4>
+                  <h4 class="product-price">$49.99</h4>
+              </div>
+          </div>
+        </div>
+        <!-- Single Product -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div id="product-1" class="single-product">
+            <a href="{{url_for('product', id=1)}}">
+              <div class="part-1">
+              </div>
+            </a>
+              <div class="part-2">
+                  <h3 class="product-title">Addidas Breaknet Shoes</h3>
+                  <h4 class="product-old-price">$79.99</h4>
+                  <h4 class="product-price">$49.99</h4>
+              </div>
+          </div>
+        </div>  
+    </div>
+    <div class="row">
+      <!-- Single Product -->
+      <div class="col-md-6 col-lg-4 col-xl-3">
+          <div id="product-1" class="single-product">
+            <a href="{{url_for('product', id=1)}}">
+              <div class="part-1">
+              </div>
+            </a>
+              <div class="part-2">
+                  <h3 class="product-title">Addidas Breaknet Shoes</h3>
+                  <h4 class="product-old-price">$79.99</h4>
+                  <h4 class="product-price">$49.99</h4>
+              </div>
+          </div>
+      </div>
+      <!-- Single Product -->
+      <div class="col-md-6 col-lg-4 col-xl-3">
+          <div id="product-2" class="single-product">
+              <a href="{{url_for('product', id=22)}}">
+                <div class="part-1">  
+                  <span class="discount">15% off</span>
+                </div>
+              </a>
+              <div class="part-2">
+                  <h3 class="product-title">Ted Baker Leather Shoes</h3>
+                  <h4 class="product-price">$49.99</h4>
+              </div>
+          </div>
+      </div>
+      <!-- Single Product -->
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div id="product-5" class="single-product">
+          <a href="{{url_for('product', id=10)}}">
+            <div class="part-1">
+            </div>
+          </a>
+            <div class="part-2">
+                <h3 class="product-title">Blue Suede Sneakers</h3>
+                <h4 class="product-old-price">$79.99</h4>
+                <h4 class="product-price">$49.99</h4>
+            </div>
+        </div>
+      </div>
+      <!-- Single Product -->
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div id="product-7" class="single-product">
+          <a href="{{url_for('product', id=4)}}">
+            <div class="part-1">
+            </div>
+          </a>
+            <div class="part-2">
+                <h3 class="product-title">Nike Air Max 95</h3>
+                <h4 class="product-old-price">$79.99</h4>
+                <h4 class="product-price">$49.99</h4>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Single Product -->
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div id="product-7" class="single-product">
+          <a href="{{url_for('product', id=4)}}">
+            <div class="part-1">
+            </div>
+          </a>
+            <div class="part-2">
+                <h3 class="product-title">Nike Air Max 95</h3>
+                <h4 class="product-old-price">$79.99</h4>
+                <h4 class="product-price">$49.99</h4>
+            </div>
+        </div>
+    </div>
+    <!-- Single Product -->
+    <div class="col-md-6 col-lg-4 col-xl-3">
+        <div id="product-8" class="single-product">
+          <a href="{{url_for('product', id=19)}}">
+            <div class="part-1">
+            </div>
+          </a>
+            <div class="part-2">
+                <h3 class="product-title">New Balance 990v2</h3>
+                <h4 class="product-price">$49.99</h4>
+            </div>
+        </div>
+    </div>
+      <!-- Single Product -->
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div id="product-5" class="single-product">
+          <a href="{{url_for('product', id=10)}}">
+            <div class="part-1">
+            </div>
+          </a>
+            <div class="part-2">
+                <h3 class="product-title">Blue Suede Sneakers</h3>
+                <h4 class="product-old-price">$79.99</h4>
+                <h4 class="product-price">$49.99</h4>
+            </div>
+        </div>
+      </div>
+      <!-- Single Product -->
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div id="product-1" class="single-product">
+          <a href="{{url_for('product', id=1)}}">
+            <div class="part-1">
+            </div>
+          </a>
+            <div class="part-2">
+                <h3 class="product-title">Addidas Breaknet Shoes</h3>
+                <h4 class="product-old-price">$79.99</h4>
+                <h4 class="product-price">$49.99</h4>
+            </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+</section>
+{% endblock content %}
