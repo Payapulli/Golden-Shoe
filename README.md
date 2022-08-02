@@ -11,6 +11,6 @@
 `pip install flask_bcrypt`\
 `pip install email_validator`\
 
-3. Run `python run.py`. 
+3. Run `python3 run.py`. 
 
 You can now access the website on http://127.0.0.1:5000/
