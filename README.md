@@ -3,6 +3,7 @@
 ## Setup 
 Create a virtual environment like so
 `source venv/bin/activate
+
 Run the following commands
   `pip install Flask
   `pip install flask_wtf
