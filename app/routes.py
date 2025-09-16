@@ -39,13 +39,25 @@ def search():
 
 @app.route('/search_results/<query>')
 def search_results(query):
-    qstring = "%{}%".format(query)
-    prod = Product.query.filter(Product.name.like(qstring)).all()
-    length = len(prod)
-    img=[]
-    for p in prod:
-        img.append(base64.b64encode(p.image_file1).decode('ascii'))
-    return render_template('search_results.html', title='Search Results', query=query, prod=prod, length=length, img=img)
+    try:
+        safe_query = query.strip()[:100]
+        if not safe_query:
+            flash('Please enter a valid search term', 'warning')
+            return redirect(url_for('home'))
+            
+        qstring = "%{}%".format(safe_query)
+        prod = Product.query.filter(Product.name.like(qstring)).all()
+        length = len(prod)
+        img=[]
+        for p in prod:
+            if p.image_file1:
+                img.append(base64.b64encode(p.image_file1).decode('ascii'))
+            else:
+                img.append(None)
+        return render_template('search_results.html', title='Search Results', query=safe_query, prod=prod, length=length, img=img)
+    except Exception as e:
+        flash('An error occurred during search. Please try again.', 'error')
+        return redirect(url_for('home'))
 
 @app.route("/signup", methods=['GET', 'POST'])
 def register():
@@ -103,57 +115,77 @@ def account():
 
 @app.route("/product<int:id>", methods=['GET', 'POST'])
 def product(id):
-    session['url'] = None
-    sizes = []
-    prod = Product.query.filter_by(pid=id).first_or_404("This product does not exist")
-    
-    # Get sizes attached to this product_type_id
-    products = Product.query.filter_by(product_type_id=prod.product_type_id).all()
-    for i in products:
-        sizes.append(i.size)
+    try:
+        session['url'] = None
+        sizes = []
+        
+        if not isinstance(id, int) or id <= 0:
+            flash('Invalid product ID', 'error')
+            return redirect(url_for('home'))
+            
+        prod = Product.query.filter_by(pid=id).first()
+        if not prod:
+            flash('Product not found', 'error')
+            return redirect(url_for('home'))
+        
+        products = Product.query.filter_by(product_type_id=prod.product_type_id).all()
+        for i in products:
+            sizes.append(i.size)
 
-    img=[]
-    img.append(base64.b64encode(prod.image_file1).decode('ascii'))
-    if prod.image_file2:
-        img.append(base64.b64encode(prod.image_file2).decode('ascii'))
-    if prod.image_file3:
-        img.append(base64.b64encode(prod.image_file3).decode('ascii'))
-    if prod.image_file4:
-        img.append(base64.b64encode(prod.image_file4).decode('ascii'))
-    form = OrderForm()
-    if form.validate_on_submit():
-        if not current_user.is_authenticated:
-            session['url'] = url_for('product', id=id)
-            flash('You must log in first', 'danger')  
-            return redirect(url_for('login'))
-        
-        found = False
-        for product in products:
-            if product.size == int(form.size.data):
-                found = True
-                selected_product = product
-        
-        if found == False:
-            flash('This size is not available', 'danger') 
-            return redirect(url_for('product', id=id))
-        
-        if form.quantity.data <= 0:
-            flash('Invalid quantity', 'danger')
-        elif (form.quantity.data > selected_product.stock):
-            s='Requested quantity exceeds stock, only {stock} pieces available'.format(stock=selected_product.stock)
-            flash(s, 'danger')
-        else:
-            cart = Cart.query.filter_by(pid=selected_product.pid).first()
-            if cart != None:
-                cart.quantity += form.quantity.data
+        img = []
+        if prod.image_file1:
+            img.append(base64.b64encode(prod.image_file1).decode('ascii'))
+        if prod.image_file2:
+            img.append(base64.b64encode(prod.image_file2).decode('ascii'))
+        if prod.image_file3:
+            img.append(base64.b64encode(prod.image_file3).decode('ascii'))
+        if prod.image_file4:
+            img.append(base64.b64encode(prod.image_file4).decode('ascii'))
+            
+        form = OrderForm()
+        if form.validate_on_submit():
+            if not current_user.is_authenticated:
+                session['url'] = url_for('product', id=id)
+                flash('You must log in first', 'danger')  
+                return redirect(url_for('login'))
+            
+            quantity = form.quantity.data
+            if not isinstance(quantity, int) or quantity <= 0:
+                flash('Please enter a valid quantity', 'danger')
+                return redirect(url_for('product', id=id))
+            
+            selected_product = None
+            for product in products:
+                if product.size == int(form.size.data):
+                    selected_product = product
+                    break
+            
+            if not selected_product:
+                flash('This size is not available', 'danger') 
+                return redirect(url_for('product', id=id))
+            
+            if quantity > selected_product.stock:
+                flash(f'Requested quantity exceeds stock, only {selected_product.stock} pieces available', 'danger')
+                return redirect(url_for('product', id=id))
+            
+            try:
+                cart = Cart.query.filter_by(uid=current_user.id, pid=selected_product.pid).first()
+                if cart:
+                    cart.quantity += quantity
+                else:
+                    new_cart = Cart(uid=current_user.id, pid=selected_product.pid, quantity=quantity)
+                    db.session.add(new_cart)
                 db.session.commit()
-            else:
-                new_cart = Cart(uid=current_user.id, pid=selected_product.pid, quantity=form.quantity.data)
-                db.session.add(new_cart)
-                db.session.commit()
-            flash('The product was added to your cart!', 'success')
+                flash('The product was added to your cart!', 'success')
+            except Exception as e:
+                db.session.rollback()
+                flash('An error occurred while adding to cart. Please try again.', 'error')
 
-    return render_template('product_page.html', title='Product Details', prod=prod, img=img, form=form, sizes=sizes)
+        return render_template('product_page.html', title='Product Details', prod=prod, img=img, form=form, sizes=sizes)
+        
+    except Exception as e:
+        flash('An error occurred while loading the product. Please try again.', 'error')
+        return redirect(url_for('home'))
 
 @app.route("/cart")
 @login_required

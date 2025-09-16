@@ -48,134 +48,134 @@ def insertBLOB(id, product_type_id, name, cost, details, image_file1, image_file
 # Size 7
 insertBLOB(1, 1, "Addidas Breaknet", "49.99", 
 "Stay clear of foot faults on and off the court in these tennis-inspired shoes. The adidas shoes have a classic 3-Stripes upper for a timeless look. They're built for comfort with a soft sockliner and textile lining.", 
-"static/images/addidas_breaknet/addidas_breaknet.jpeg", "static/images/addidas_breaknet/addidas_breaknet2.jpg", 
-"static/images/addidas_breaknet/addidas_breaknet3.jpg", "static/images/addidas_breaknet/addidas_breaknet4.jpg", 7, 20)
+"app/static/images/addidas_breaknet/addidas_breaknet.jpeg", "app/static/images/addidas_breaknet/addidas_breaknet2.jpg", 
+"app/static/images/addidas_breaknet/addidas_breaknet3.jpg", "app/static/images/addidas_breaknet/addidas_breaknet4.jpg", 7, 20)
 # Size 8
 insertBLOB(2, 1, "Addidas Breaknet", "49.99", 
 "Stay clear of foot faults on and off the court in these tennis-inspired shoes. The adidas shoes have a classic 3-Stripes upper for a timeless look. They're built for comfort with a soft sockliner and textile lining.", 
-"static/images/addidas_breaknet/addidas_breaknet.jpeg", "static/images/addidas_breaknet/addidas_breaknet2.jpg", 
-"static/images/addidas_breaknet/addidas_breaknet3.jpg", "static/images/addidas_breaknet/addidas_breaknet4.jpg", 8, 20)
+"app/static/images/addidas_breaknet/addidas_breaknet.jpeg", "app/static/images/addidas_breaknet/addidas_breaknet2.jpg", 
+"app/static/images/addidas_breaknet/addidas_breaknet3.jpg", "app/static/images/addidas_breaknet/addidas_breaknet4.jpg", 8, 20)
 # Size 9
 insertBLOB(3, 1, "Addidas Breaknet", "49.99", 
 "Stay clear of foot faults on and off the court in these tennis-inspired shoes. The adidas shoes have a classic 3-Stripes upper for a timeless look. They're built for comfort with a soft sockliner and textile lining.", 
-"static/images/addidas_breaknet/addidas_breaknet.jpeg", "static/images/addidas_breaknet/addidas_breaknet2.jpg", 
-"static/images/addidas_breaknet/addidas_breaknet3.jpg", "static/images/addidas_breaknet/addidas_breaknet4.jpg", 9, 20)
+"app/static/images/addidas_breaknet/addidas_breaknet.jpeg", "app/static/images/addidas_breaknet/addidas_breaknet2.jpg", 
+"app/static/images/addidas_breaknet/addidas_breaknet3.jpg", "app/static/images/addidas_breaknet/addidas_breaknet4.jpg", 9, 20)
 
 # Air Max 95
 # Size 7
 insertBLOB(4, 2, "Air Max 95", "49.99", 
 "Taking inspiration from the human body and '90s athletics aesthetics, the Air Max 95 mixes unbelievable comfort with fast-paced style. The wavy side panels add natural flow to any outfit, while visible Nike Air in the heel and forefoot delivers performance comfort.", 
-"static/images/air_max95/air_max95.jpeg", "static/images/air_max95/air_max95_2.jpeg", 
-"static/images/air_max95/air_max95_3.jpeg", "static/images/air_max95/air_max95_4.jpeg", 7, 20)
+"app/static/images/air_max95/air_max95.jpeg", "app/static/images/air_max95/air_max95_2.jpeg", 
+"app/static/images/air_max95/air_max95_3.jpeg", "app/static/images/air_max95/air_max95_4.jpeg", 7, 20)
 # Size 8
 insertBLOB(5, 2, "Air Max 95", "49.99", 
 "Taking inspiration from the human body and '90s athletics aesthetics, the Air Max 95 mixes unbelievable comfort with fast-paced style. The wavy side panels add natural flow to any outfit, while visible Nike Air in the heel and forefoot delivers performance comfort.", 
-"static/images/air_max95/air_max95.jpeg", "static/images/air_max95/air_max95_2.jpeg", 
-"static/images/air_max95/air_max95_3.jpeg", "static/images/air_max95/air_max95_4.jpeg", 8, 20)
+"app/static/images/air_max95/air_max95.jpeg", "app/static/images/air_max95/air_max95_2.jpeg", 
+"app/static/images/air_max95/air_max95_3.jpeg", "app/static/images/air_max95/air_max95_4.jpeg", 8, 20)
 # Size 9
 insertBLOB(6, 2, "Air Max 95", "49.99", 
 "Taking inspiration from the human body and '90s athletics aesthetics, the Air Max 95 mixes unbelievable comfort with fast-paced style. The wavy side panels add natural flow to any outfit, while visible Nike Air in the heel and forefoot delivers performance comfort.", 
-"static/images/air_max95/air_max95.jpeg", "static/images/air_max95/air_max95_2.jpeg", 
-"static/images/air_max95/air_max95_3.jpeg", "static/images/air_max95/air_max95_4.jpeg", 9, 20)
+"app/static/images/air_max95/air_max95.jpeg", "app/static/images/air_max95/air_max95_2.jpeg", 
+"app/static/images/air_max95/air_max95_3.jpeg", "app/static/images/air_max95/air_max95_4.jpeg", 9, 20)
 
 # Shein Black Heels
 # Size 7
 insertBLOB(7, 3, "Shein Black Heels", "49.99", 
 "Minimalist Stiletto Heeled Ankle Strap Sandals", 
-"static/images/black_heels/black_heels.jpg", "static/images/black_heels/black_heels2.jpg", 
-"static/images/black_heels/black_heels3.jpg", "static/images/black_heels/black_heels4.jpg", 7, 20)
+"app/static/images/black_heels/black_heels.jpg", "app/static/images/black_heels/black_heels2.jpg", 
+"app/static/images/black_heels/black_heels3.jpg", "app/static/images/black_heels/black_heels4.jpg", 7, 20)
 # Size 8
 insertBLOB(8, 3, "Shein Black Heels", "49.99", 
 "Minimalist Stiletto Heeled Ankle Strap Sandals", 
-"static/images/black_heels/black_heels.jpg", "static/images/black_heels/black_heels2.jpg", 
-"static/images/black_heels/black_heels3.jpg", "static/images/black_heels/black_heels4.jpg", 8, 20)
+"app/static/images/black_heels/black_heels.jpg", "app/static/images/black_heels/black_heels2.jpg", 
+"app/static/images/black_heels/black_heels3.jpg", "app/static/images/black_heels/black_heels4.jpg", 8, 20)
 # Size 9
 insertBLOB(9, 3, "Shein Black Heels", "49.99", 
 "Minimalist Stiletto Heeled Ankle Strap Sandals", 
-"static/images/black_heels/black_heels.jpg", "static/images/black_heels/black_heels2.jpg", 
-"static/images/black_heels/black_heels3.jpg", "static/images/black_heels/black_heels4.jpg", 9, 20)
+"app/static/images/black_heels/black_heels.jpg", "app/static/images/black_heels/black_heels2.jpg", 
+"app/static/images/black_heels/black_heels3.jpg", "app/static/images/black_heels/black_heels4.jpg", 9, 20)
 
 # Blue Suede Shoes
 # Size 7
 insertBLOB(10, 4, "Blue Suede Shoes", "49.99", 
 "Crafted from high-end, raw materials, it features lightweight cushion technology, the perfectly-weighted rubber sole, and classic cap-toe design for a crazy-comfy, go-to look.", 
-"static/images/blue_suede/blue_suede.jpg", "static/images/blue_suede/blue_suede2.jpg", 
-"static/images/blue_suede/blue_suede3.jpg", "static/images/blue_suede/blue_suede4.jpg", 7, 20)
+"app/static/images/blue_suede/blue_suede.jpg", "app/static/images/blue_suede/blue_suede2.jpg", 
+"app/static/images/blue_suede/blue_suede3.jpg", "app/static/images/blue_suede/blue_suede4.jpg", 7, 20)
 # Size 8
 insertBLOB(11, 4, "Blue Suede Shoes", "49.99", 
 "Crafted from high-end, raw materials, it features lightweight cushion technology, the perfectly-weighted rubber sole, and classic cap-toe design for a crazy-comfy, go-to look.", 
-"static/images/blue_suede/blue_suede.jpg", "static/images/blue_suede/blue_suede2.jpg", 
-"static/images/blue_suede/blue_suede3.jpg", "static/images/blue_suede/blue_suede4.jpg", 8, 20)
+"app/static/images/blue_suede/blue_suede.jpg", "app/static/images/blue_suede/blue_suede2.jpg", 
+"app/static/images/blue_suede/blue_suede3.jpg", "app/static/images/blue_suede/blue_suede4.jpg", 8, 20)
 # Size 9
 insertBLOB(12, 4, "Blue Suede Shoes", "49.99", 
 "Crafted from high-end, raw materials, it features lightweight cushion technology, the perfectly-weighted rubber sole, and classic cap-toe design for a crazy-comfy, go-to look.", 
-"static/images/blue_suede/blue_suede.jpg", "static/images/blue_suede/blue_suede2.jpg", 
-"static/images/blue_suede/blue_suede3.jpg", "static/images/blue_suede/blue_suede4.jpg", 9, 20)
+"app/static/images/blue_suede/blue_suede.jpg", "app/static/images/blue_suede/blue_suede2.jpg", 
+"app/static/images/blue_suede/blue_suede3.jpg", "app/static/images/blue_suede/blue_suede4.jpg", 9, 20)
 
 # Brogue Ankle Boots
 # Size 7
 insertBLOB(13, 5, "Brogue Ankle Boots", "49.99", 
 "Yasmine Tan. Beautifully crafted in Italian tan leather with broguing throughout.", 
-"static/images/brogue_ankle_boots/brogue_ankle_boots.jpg", "static/images/brogue_ankle_boots/brogue_ankle_boots2.jpg", 
-"static/images/brogue_ankle_boots/brogue_ankle_boots3.jpg", "static/images/brogue_ankle_boots/brogue_ankle_boots4.jpg", 7, 20)
+"app/static/images/brogue_ankle_boots/brogue_ankle_boots.jpg", "app/static/images/brogue_ankle_boots/brogue_ankle_boots2.jpg", 
+"app/static/images/brogue_ankle_boots/brogue_ankle_boots3.jpg", "app/static/images/brogue_ankle_boots/brogue_ankle_boots4.jpg", 7, 20)
 # Size 8
 insertBLOB(14, 5, "Brogue Ankle Boots", "49.99", 
 "Yasmine Tan. Beautifully crafted in Italian tan leather with broguing throughout.", 
-"static/images/brogue_ankle_boots/brogue_ankle_boots.jpg", "static/images/brogue_ankle_boots/brogue_ankle_boots2.jpg", 
-"static/images/brogue_ankle_boots/brogue_ankle_boots3.jpg", "static/images/brogue_ankle_boots/brogue_ankle_boots4.jpg", 8, 20)
+"app/static/images/brogue_ankle_boots/brogue_ankle_boots.jpg", "app/static/images/brogue_ankle_boots/brogue_ankle_boots2.jpg", 
+"app/static/images/brogue_ankle_boots/brogue_ankle_boots3.jpg", "app/static/images/brogue_ankle_boots/brogue_ankle_boots4.jpg", 8, 20)
 # Size 9
 insertBLOB(15, 5, "Brogue Ankle Boots", "49.99", 
 "Yasmine Tan. Beautifully crafted in Italian tan leather with broguing throughout.", 
-"static/images/brogue_ankle_boots/brogue_ankle_boots.jpg", "static/images/brogue_ankle_boots/brogue_ankle_boots2.jpg", 
-"static/images/brogue_ankle_boots/brogue_ankle_boots3.jpg", "static/images/brogue_ankle_boots/brogue_ankle_boots4.jpg", 9, 20)
+"app/static/images/brogue_ankle_boots/brogue_ankle_boots.jpg", "app/static/images/brogue_ankle_boots/brogue_ankle_boots2.jpg", 
+"app/static/images/brogue_ankle_boots/brogue_ankle_boots3.jpg", "app/static/images/brogue_ankle_boots/brogue_ankle_boots4.jpg", 9, 20)
 
 # Cassia white trainers
 # Size 7
 insertBLOB(16, 6, "Cassia white trainers", "49.99", 
 "Break the mould with this first-of-its-kind design. Our Cassia dresses up a progressive, feminine silhouette with a mesh base and slightly oversized leather panels.", 
-"static/images/cassia_trainers/cassia_trainers.jpg", "static/images/cassia_trainers/cassia_trainers2.jpg", 
-"static/images/cassia_trainers/cassia_trainers3.jpg", "static/images/cassia_trainers/cassia_trainers4.jpg", 7, 20)
+"app/static/images/cassia_trainers/cassia_trainers.jpg", "app/static/images/cassia_trainers/cassia_trainers2.jpg", 
+"app/static/images/cassia_trainers/cassia_trainers3.jpg", "app/static/images/cassia_trainers/cassia_trainers4.jpg", 7, 20)
 # Size 8
 insertBLOB(17, 6, "Cassia white trainers", "49.99", 
 "Break the mould with this first-of-its-kind design. Our Cassia dresses up a progressive, feminine silhouette with a mesh base and slightly oversized leather panels.", 
-"static/images/cassia_trainers/cassia_trainers.jpg", "static/images/cassia_trainers/cassia_trainers2.jpg", 
-"static/images/cassia_trainers/cassia_trainers3.jpg", "static/images/cassia_trainers/cassia_trainers4.jpg", 8, 20)
+"app/static/images/cassia_trainers/cassia_trainers.jpg", "app/static/images/cassia_trainers/cassia_trainers2.jpg", 
+"app/static/images/cassia_trainers/cassia_trainers3.jpg", "app/static/images/cassia_trainers/cassia_trainers4.jpg", 8, 20)
 # Size 9
 insertBLOB(18, 6, "Cassia white trainers", "49.99", 
 "Break the mould with this first-of-its-kind design. Our Cassia dresses up a progressive, feminine silhouette with a mesh base and slightly oversized leather panels.", 
-"static/images/cassia_trainers/cassia_trainers.jpg", "static/images/cassia_trainers/cassia_trainers2.jpg", 
-"static/images/cassia_trainers/cassia_trainers3.jpg", "static/images/cassia_trainers/cassia_trainers4.jpg", 9, 20)
+"app/static/images/cassia_trainers/cassia_trainers.jpg", "app/static/images/cassia_trainers/cassia_trainers2.jpg", 
+"app/static/images/cassia_trainers/cassia_trainers3.jpg", "app/static/images/cassia_trainers/cassia_trainers4.jpg", 9, 20)
 
 # New Balance Trainers
 # Size 7
 insertBLOB(19, 7, "New Balance Trainers", "49.99", 
 "The men's 574 is iconic. With clean and classic lines, this die cut EVA sneaker makes a standout, everyday statement.", 
-"static/images/new_balance/new_balance.jpg", "static/images/new_balance/new_balance2.jpg", 
-"static/images/new_balance/new_balance3.jpg", "static/images/new_balance/new_balance4.jpg", 7, 20)
+"app/static/images/new_balance/new_balance.jpg", "app/static/images/new_balance/new_balance2.jpg", 
+"app/static/images/new_balance/new_balance3.jpg", "app/static/images/new_balance/new_balance4.jpg", 7, 20)
 # Size 8
 insertBLOB(20, 7, "New Balance Trainers", "49.99", 
 "The men's 574 is iconic. With clean and classic lines, this die cut EVA sneaker makes a standout, everyday statement.", 
-"static/images/new_balance/new_balance.jpg", "static/images/new_balance/new_balance2.jpg", 
-"static/images/new_balance/new_balance3.jpg", "static/images/new_balance/new_balance4.jpg", 8, 20)
+"app/static/images/new_balance/new_balance.jpg", "app/static/images/new_balance/new_balance2.jpg", 
+"app/static/images/new_balance/new_balance3.jpg", "app/static/images/new_balance/new_balance4.jpg", 8, 20)
 # Size 7
 insertBLOB(21, 7, "New Balance Trainers", "49.99", 
 "The men's 574 is iconic. With clean and classic lines, this die cut EVA sneaker makes a standout, everyday statement.", 
-"static/images/new_balance/new_balance.jpg", "static/images/new_balance/new_balance2.jpg", 
-"static/images/new_balance/new_balance3.jpg", "static/images/new_balance/new_balance4.jpg", 9, 20)
+"app/static/images/new_balance/new_balance.jpg", "app/static/images/new_balance/new_balance2.jpg", 
+"app/static/images/new_balance/new_balance3.jpg", "app/static/images/new_balance/new_balance4.jpg", 9, 20)
 
 # Ted Baker leather shoes
 # Size 7
 insertBLOB(22, 8, "Ted Baker leather shoes", "49.99", 
 "A classic brogue, these are an essential item of footwear that belongs in everyone’s collection.", 
-"static/images/ted_baker_leather/ted_baker_leather.jpg", "static/images/ted_baker_leather/ted_baker_leather2.jpg", 
-"static/images/ted_baker_leather/ted_baker_leather3.jpg", "static/images/ted_baker_leather/ted_baker_leather4.jpg", 7, 20)
+"app/static/images/ted_baker_leather/ted_baker_leather.jpg", "app/static/images/ted_baker_leather/ted_baker_leather2.jpg", 
+"app/static/images/ted_baker_leather/ted_baker_leather3.jpg", "app/static/images/ted_baker_leather/ted_baker_leather4.jpg", 7, 20)
 # Size 8
 insertBLOB(23, 8, "Ted Baker leather shoes", "49.99", 
 "A classic brogue, these are an essential item of footwear that belongs in everyone’s collection.", 
-"static/images/ted_baker_leather/ted_baker_leather.jpg", "static/images/ted_baker_leather/ted_baker_leather2.jpg", 
-"static/images/ted_baker_leather/ted_baker_leather3.jpg", "static/images/ted_baker_leather/ted_baker_leather4.jpg", 8, 20)
+"app/static/images/ted_baker_leather/ted_baker_leather.jpg", "app/static/images/ted_baker_leather/ted_baker_leather2.jpg", 
+"app/static/images/ted_baker_leather/ted_baker_leather3.jpg", "app/static/images/ted_baker_leather/ted_baker_leather4.jpg", 8, 20)
 # Size 9
 insertBLOB(24, 8, "Ted Baker leather shoes", "49.99", 
 "A classic brogue, these are an essential item of footwear that belongs in everyone’s collection.", 
-"static/images/ted_baker_leather/ted_baker_leather.jpg", "static/images/ted_baker_leather/ted_baker_leather2.jpg", 
-"static/images/ted_baker_leather/ted_baker_leather3.jpg", "static/images/ted_baker_leather/ted_baker_leather4.jpg", 9, 20)
+"app/static/images/ted_baker_leather/ted_baker_leather.jpg", "app/static/images/ted_baker_leather/ted_baker_leather2.jpg", 
+"app/static/images/ted_baker_leather/ted_baker_leather3.jpg", "app/static/images/ted_baker_leather/ted_baker_leather4.jpg", 9, 20)
